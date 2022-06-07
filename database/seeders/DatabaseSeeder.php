@@ -27,5 +27,8 @@ class DatabaseSeeder extends Seeder
         Artist::factory(5)->create();
         Festival::factory(5)->create();
         Gig::factory(5)->create();
+
+        Festival::factory()->has(Artist::factory()->count(3))->create();
+        
     }
 }

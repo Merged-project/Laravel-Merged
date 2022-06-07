@@ -13,4 +13,7 @@ class Festival extends Model
         'name',
         'location',
     ];
+    public function artists(){
+        return $this->belongsToMany(Artist::class);
+    }
 }
