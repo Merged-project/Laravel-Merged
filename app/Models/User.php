@@ -50,4 +50,8 @@ class User extends Authenticatable
     public function festivals() {
         return $this->belongsToMany(Festival::class);
     }
+
+    public function gigs() {
+        return $this->belongsToMany(Gig::class);
+    }
 }
