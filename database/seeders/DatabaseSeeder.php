@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Artist;
 use App\Models\Festival;
 use App\Models\Gig;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,5 +28,6 @@ class DatabaseSeeder extends Seeder
         Artist::factory(5)->create();
         Festival::factory(5)->create();
         Gig::factory(5)->create();
+        User::factory(5)->create();
     }
 }
