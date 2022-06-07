@@ -15,6 +15,9 @@ class Artist extends Model
         'img',
     ];
 
+    public function gig() {
+        return $this->belongsToMany(Gig::class);
+    }
     public function festivals(){
         return $this->belongsToMany(Festival::class);
 
