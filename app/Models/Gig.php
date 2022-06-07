@@ -16,6 +16,6 @@ class Gig extends Model
     ];
 
     public function gigs(){
-        return $this->belongsToMany(Gigs::class);
+        return $this->belongsToMany(Gig::class);
     }
 }
