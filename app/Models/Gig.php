@@ -16,9 +16,6 @@ class Gig extends Model
     ];
     public function artist() {
         return $this->belongsToMany(Artist::class);
-
-    public function gigs(){
-        return $this->belongsToMany(Gig::class);
     }
 
     public function users(){

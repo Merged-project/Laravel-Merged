@@ -18,9 +18,9 @@ class Artist extends Model
     public function gig() {
         return $this->belongsToMany(Gig::class);
     }
+    
     public function festivals(){
         return $this->belongsToMany(Festival::class);
-
     }
 
 }
