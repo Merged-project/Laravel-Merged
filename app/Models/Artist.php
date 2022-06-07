@@ -14,4 +14,10 @@ class Artist extends Model
         'genre',
         'img',
     ];
+
+    public function festivals(){
+        return $this->belongsToMany(Festival::class);
+
+    }
+
 }
