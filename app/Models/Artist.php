@@ -14,4 +14,8 @@ class Artist extends Model
         'genre',
         'img',
     ];
+
+    public function gig() {
+        return $this->belongsToMany(Gig::class);
+    }
 }

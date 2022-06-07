@@ -13,4 +13,7 @@ class Gig extends Model
         'location',
         'date',
     ];
+    public function artist() {
+        return $this->belongsToMany(Artist::class);
+    }
 }
