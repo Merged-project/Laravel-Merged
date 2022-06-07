@@ -18,4 +18,8 @@ class Festival extends Model
     public function user() {
         return $this->belongsToMany(User::class);
     }
+
+    public function artists() {
+        return $this->belongsToMany(Artist::class);
+    }
 }

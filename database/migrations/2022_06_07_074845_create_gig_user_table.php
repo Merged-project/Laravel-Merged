@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('artist_festival', function (Blueprint $table) {
+        Schema::create('gig_user', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('gig_id');
+            $table->foreign('gig_id')->references('id')->on('gigs');
             
-            $table->unsignedBigInteger('artist_id');
-            $table->foreign('artist_id')->references('id')->on('artists');
-
-            $table->unsignedBigInteger('festival_id');
-            $table->foreign('festival_id')->references('id')->on('festivals');
-
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -33,7 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artist_festival');
+        Schema::dropIfExists('gig_user');
     }
-
 };

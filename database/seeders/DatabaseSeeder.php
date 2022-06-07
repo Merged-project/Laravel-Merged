@@ -9,7 +9,6 @@ use App\Models\Festival;
 use App\Models\Gig;
 use App\Models\User;
 
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -29,12 +28,12 @@ class DatabaseSeeder extends Seeder
         Artist::factory(5)->create();
         Festival::factory(5)->create();
         Gig::factory(5)->create();
+        User::factory(5)->create();
 
-        User::factory(5)
-            ->has(Festival::factory()->count(3))
-            ->create();
-        Artist::factory(3)->has(Gig::factory()->count(3))->create();
-        Festival::factory()->has(Artist::factory()->count(3))->create();
+        Artist::factory(3)->has(Gig::factory()->count(3))->create();;
+        Gig::factory()->has(User::factory()->count(3))->create();
+        Artist::factory(3)->has(Festival::factory()->count(3))->create();
+        Festival::factory(3)->has(User::factory()->count(5))->create();
         
     }
 }

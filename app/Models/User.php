@@ -24,6 +24,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -45,5 +49,9 @@ class User extends Authenticatable
 
     public function festivals() {
         return $this->belongsToMany(Festival::class);
+    }
+
+    public function gigs() {
+        return $this->belongsToMany(Gig::class);
     }
 }

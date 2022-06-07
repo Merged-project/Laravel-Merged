@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,5 +16,12 @@ class Gig extends Model
     ];
     public function artist() {
         return $this->belongsToMany(Artist::class);
+
+    public function gigs(){
+        return $this->belongsToMany(Gig::class);
+    }
+
+    public function users(){
+        return $this->belongsToMany(User::class);
     }
 }
