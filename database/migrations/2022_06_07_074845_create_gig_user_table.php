@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('gig_user', function (Blueprint $table) {
             $table->id();
+
             $table->unsignedBigInteger('gig_id');
             $table->foreign('gig_id')->references('id')->on('gigs');
+            
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

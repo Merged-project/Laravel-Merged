@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('artist_festival', function (Blueprint $table) {
             $table->id();
+            
             $table->unsignedBigInteger('artist_id');
             $table->foreign('artist_id')->references('id')->on('artists');
 
             $table->unsignedBigInteger('festival_id');
             $table->foreign('festival_id')->references('id')->on('festivals');
+
             $table->timestamps();
         });
     }
