@@ -19,6 +19,7 @@ class FestivalFactory extends Factory
         return [
             'name'=> $this->faker->company(),
             'location' => $this->faker->city(),
+            'img' => $this->faker->imageUrl(),
         ];
     }
 }
