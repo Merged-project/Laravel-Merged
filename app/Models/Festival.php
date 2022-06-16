@@ -13,6 +13,7 @@ class Festival extends Model
     protected $fillable = [
         'name',
         'location',
+        'img',
     ];
 
     public function user() {
